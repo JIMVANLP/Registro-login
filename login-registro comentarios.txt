@@ -1,0 +1,19 @@
+*integrar autenticacion al login y registro
+
+laravel/ui
+
+*agregar pestana login y registro
+
+ php artisan ui bootstrap --auth
+
+bs-5 para inclucir estil0s de boostrap
+
+para agregar una columna a una tabla
+ php artisan make:migration add_status_column_on_users_table --table=users
+
+
+
+
+rutas firmadas
+auditorias en base de datos
+manejo de errores
