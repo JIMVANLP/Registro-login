@@ -32,7 +32,6 @@
                       </span>
                     @endif
                   </div><br>
-
                   <button type="submit" class="btn btn-primary">ENVIAR</button>
                 </div>
               </div>

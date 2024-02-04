@@ -33,9 +33,9 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        /*$this->validateLogin($request);
+        $this->validateLogin($request);
 
-        if ($this->hasTooManyLoginAttempts($request)) {
+        /*if ($this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
 
             return $this->sendLockoutResponse($request);
@@ -60,9 +60,9 @@ class LoginController extends Controller
             }
         }
 
-        /*$this->incrementLoginAttempts($request);
+        /*$this->incrementLoginAttempts($request);*/
 
-        return $this->sendFailedLoginResponse($request);*/
+        return $this->sendFailedLoginResponse($request);
     }
 
 
@@ -93,7 +93,7 @@ class LoginController extends Controller
             Auth::login($user);
             if($user->rol=='Admin')
             {
-                return view("auth.admin");
+                return redirect('/admin');
             }
             else
             {
@@ -101,28 +101,7 @@ class LoginController extends Controller
             }
         }
 
-        return redirect()->back()->withErrors(['error'=> 'Código de verificación incorrecto']);
+        /*return redirect()->back()->withErrors(['error'=> 'Código de verificación incorrecto']);*/
+        return $this->sendFailedLoginResponse($request);
     }
-
-
-
-
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    /*protected $redirectTo = '/home';*/
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    /*public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }*/
-
-
 }

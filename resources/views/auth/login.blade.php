@@ -58,29 +58,29 @@
                         <label class="form-label" for="form2Example1">Ingresa tu correo &ensp;</label>
                         <!-- mostrar error en caso de llenar mal los campos-->
                         @error('email')
-                        <span style="color: red">{{$message}}</span>
+                        <span style="color: red">{{"Correo no valido"}}</span>
                         @enderror
-                        </div>
+                    </div>
 
                         <!-- Password input -->
-                        <div class="form-outline mb-4">
+                    <div class="form-outline mb-4">
                         <input type="password" name="password" id="form2Example2" class="form-control" required maxlength="30" />
                         <label class="form-label" for="form2Example2">Contraseña &ensp;</label>
                         <!-- mostrar error en caso de llenar mal los campos-->
                         @error('password')
-                        <span style="color: red">{{$message}}</span>
+                        <span style="color: red">{{"Contraseña Equivocada"}}</span>
                         @enderror
-                        </div>
+                    </div>
 
                         <!-- 2 column grid layout for inline styling -->
-                        <div class="row mb-4">
+                    <div class="row mb-4">
                             <div class="col d-flex justify-content-center">
                             <!-- Checkbox
                             <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
                             <label class="form-check-label" for="form2Example31"> Recordar mi usuario</label>
                             </div>-->
-                        </div>
+                            </div>
 
                         <div class="col">
                             <!-- Simple link -->

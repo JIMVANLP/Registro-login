@@ -16,11 +16,13 @@ use App\Http\Controllers\Auth\LoginController;
 
 
 Route::middleware('auth')->group(function(){
+    Route::view('/admin', 'auth.admin')->name('inicio.admin');
 });
 Route::get('/', function () {
     return view('auth.login');
 });
 Auth::routes();
+
 Route::post('/login-two-factor/{user}','App\Http\Controllers\Auth\LoginController@login2FA')->name('login.2fa');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
