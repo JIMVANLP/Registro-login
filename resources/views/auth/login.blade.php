@@ -58,7 +58,7 @@
                         <label class="form-label" for="form2Example1">Ingresa tu correo &ensp;</label>
                         <!-- mostrar error en caso de llenar mal los campos-->
                         @error('email')
-                        <span style="color: red">{{"Correo no valido"}}</span>
+                        <span style="color: red">{{"$message"}}</span>
                         @enderror
                     </div>
 
@@ -68,7 +68,7 @@
                         <label class="form-label" for="form2Example2">Contraseña &ensp;</label>
                         <!-- mostrar error en caso de llenar mal los campos-->
                         @error('password')
-                        <span style="color: red">{{"Contraseña Equivocada"}}</span>
+                        <span style="color: red">{{"$message"}}</span>
                         @enderror
                     </div>
 
