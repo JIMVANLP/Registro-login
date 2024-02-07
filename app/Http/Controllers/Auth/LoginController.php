@@ -93,7 +93,9 @@ class LoginController extends Controller
             Auth::login($user);
             if($user->rol=='Admin')
             {
+                activity()->log('login, inicio de sesion de admin');
                 return redirect('/admin');
+
             }
             else
             {
